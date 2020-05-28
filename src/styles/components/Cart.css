@@ -1,0 +1,19 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    column-gap: 35px;
+    grid-row-gap: 45px;
+}
+
+.cart {
+    padding-bottom: 10px;
+}
+
+.cart:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container_w940 {
+    max-width: 940px;
+    margin: 0 auto;
+}

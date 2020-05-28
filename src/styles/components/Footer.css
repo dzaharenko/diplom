@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    height: 55px;
+    background-color: #414141;
+    margin-top: 45px;
+}
+
+.container_w940 {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.container_w940 a {
+    padding: 15px 5px;
+}
+
+.logo {
+    float: left;
+    color: #f85163;
+    font-size: 20px;
+    font-weight: bold;
+}

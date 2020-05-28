@@ -1,0 +1,14 @@
+.panel {
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f5;
+    margin-bottom: 55px;
+}
+
+.main__panel {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 0.2fr;
+    color: #000000;
+    padding: 10px 15px;
+}
