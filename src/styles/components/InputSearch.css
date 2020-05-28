@@ -1,0 +1,27 @@
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input-container__icon {
+    position: absolute;
+    color: white;
+    min-width: 50px;
+    padding: 12px 15px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid #F85163;
+    background-color: rgba(3, 3, 6, 0.70);
+    color: #ffffff;
+    font-size: 15px;
+}
