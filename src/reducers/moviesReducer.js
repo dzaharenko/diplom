@@ -7,12 +7,9 @@ import sortArray from "../helpers/sortArray";
 
 export default {
   movies: handleActions({
-    [searchMovies]: () => {
-
-    },
     [sortMovies]: (state, {payload}) => {
       const movies = {...state};
-      return sortArray(movies, payload);
+      return {...state, current: sortArray(movies.current, payload)};
     },
   }, moviesState),
 }

@@ -3,11 +3,13 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import '../styles/components/App.css';
+/*import appStyles from '../styles/jss/app';*/
 
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import Cart from "./Cart";
+import data from "../constants/moviesData";
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +41,7 @@ class App extends Component {
   }
 
   render() {
+    /*const classes = appStyles();*/
     return (
       <>
         <Header />

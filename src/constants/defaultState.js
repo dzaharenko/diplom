@@ -3,5 +3,6 @@ export const moviesState = {
   limit: 10,
   total: 0,
   offset: 0,
-  movie: {},
+  origin: [],
+  current: [],
 };
