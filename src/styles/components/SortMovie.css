@@ -1,0 +1,38 @@
+.panel {
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f5;
+    margin-bottom: 55px;
+}
+
+.container {
+    max-width: 910px;
+    margin: 0 auto;
+}
+
+.main__panel {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 0.3fr 0.4fr 0.1fr;
+    color: #000000;
+    padding: 10px 15px;
+}
+
+.main__panel span.active{
+    color: #e91e63;
+}
+
+/*@media (max-width: 1024px) {
+    h3 {
+        font-size: 15px;
+    }
+    ul.input-function__checkbox li label {
+        min-width: 1px;
+    }
+}*/
+
+@media (max-width: 760px) {
+    .main__panel {
+        grid-template-columns: 2fr 0.7fr 1.1fr 0.4fr;
+    }
+}

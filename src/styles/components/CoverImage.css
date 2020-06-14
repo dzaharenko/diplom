@@ -1,0 +1,14 @@
+.cover_image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 360px;
+}
+
+@media (max-width: 760px) {
+    .cover_image {
+        width: 470px;
+        height: 240px;
+    }
+}

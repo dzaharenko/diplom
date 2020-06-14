@@ -1,0 +1,38 @@
+h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 910px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('../../assets/background.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-shadow {
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.header__container {
+    padding: 15px 15px 35px;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+}
+
+.header__container a {
+    margin-bottom: 45px;
+}
+
+
