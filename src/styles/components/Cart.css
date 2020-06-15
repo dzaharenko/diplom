@@ -40,3 +40,11 @@
         justify-self: center;
     }
 }
+
+@media (max-width: 450px) {
+    .cart {
+        width: 80%;
+        align-self: center;
+        justify-self: center;
+    }
+}

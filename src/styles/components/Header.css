@@ -35,4 +35,10 @@ h2 {
     margin-bottom: 45px;
 }
 
+@media (max-width: 450px) {
+    h2 {
+        font-size: 18px;
+    }
+}
+
 

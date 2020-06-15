@@ -17,3 +17,9 @@
     transform: translate(-50%, -50%);
     color: #ffffff;
 }
+
+@media (max-width: 450px) {
+    .modal-root {
+        padding: 10px;
+    }
+}

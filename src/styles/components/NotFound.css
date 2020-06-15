@@ -37,3 +37,9 @@
     display: inline-block;
     position: absolute;
 }
+
+@media (max-width: 450px) {
+    .four_zero_four_bg {
+        background-image: none;
+    }
+}

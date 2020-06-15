@@ -29,7 +29,7 @@ const Main = ({movies, total, changeSort, sort, movieList}) => {
     });
     console.log(sorted);
     movieList(sorted);
-    changeSort(newBy, newDir == 1 ? 'asc' : 'desc')
+    changeSort(newBy, newDir == 1 ? 'asc' : 'desc');
   };
 
   return (

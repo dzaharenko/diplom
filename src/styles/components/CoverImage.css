@@ -12,3 +12,10 @@
         height: 240px;
     }
 }
+
+@media (max-width: 450px) {
+    .cover_image {
+        width: 370px;
+        height: 310px;
+    }
+}

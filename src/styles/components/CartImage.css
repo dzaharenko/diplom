@@ -25,3 +25,9 @@
         height: 510px;
     }
 }
+
+@media (max-width: 450px) {
+    .cart__image-block {
+        height: 350px;
+    }
+}

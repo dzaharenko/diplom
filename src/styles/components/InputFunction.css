@@ -6,16 +6,19 @@
     display: grid;
     align-items: center;
     grid-template-columns: 0.5fr 2.4fr 1fr;
+    grid-template-areas: "srch chek btn";
 }
 
 .input-function__text {
     text-transform: uppercase;
+    grid-area: srch;
 }
 
 ul.input-function__checkbox {
     list-style: none;
     margin: 0;
     padding: 0;
+    grid-area: chek;
 }
 
 ul.input-function__checkbox li {
@@ -75,6 +78,7 @@ ul.input-function__checkbox li input[type="radio"] {
     border: none;
     color: #ffffff;
     cursor: pointer;
+    grid-area: btn;
 }
 
 .input-function__button:hover {
@@ -91,6 +95,28 @@ ul.input-function__checkbox li input[type="radio"] {
 }
 
 @media (max-width: 760px) {
+    .input-function {
+        grid-template-columns: 0.4fr 1fr 0.8fr;
+        grid-template-areas: "srch chek btn";
+    }
+    h3 {
+        font-size: 14px;
+    }
+    ul.input-function__checkbox li label {
+        min-width: 1px;
+    }
+}
+
+@media (max-width: 450px) {
+    .input-function {
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-areas: "srch chek"
+                              "btn btn";
+        grid-row-gap: 10px;
+    }
+    ul.input-function__checkbox {
+        text-align: right;
+    }
     h3 {
         font-size: 14px;
     }
