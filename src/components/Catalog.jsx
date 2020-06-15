@@ -1,46 +1,38 @@
-import React, {Component} from 'react';
-import {withRouter} from 'react-router';
+import React, {useEffect, useState} from 'react';
+import {useParams, withRouter} from 'react-router';
 
 import AboutMovies from './AboutMovies';
 import Cart from './Cart';
 
-class Catalog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      movie: {},
-    }
-  }
+const Catalog = (props) => {
+  const [movie, setMovie] = useState({});
+  const params = useParams();
 
-  componentDidUpdate() {
-    const {movie} = this.state;
-    const {params = {}} = this.props.match || {};
+  useEffect(() => {
     const paramsId = +params.id;
     if (paramsId && (JSON.stringify(movie) === '{}' || paramsId !== movie.id)) {
-      const movie = this.props.data.find(movie => paramsId === movie.id);
-      this.setState({movie});
+      const newMovie = props.data.find(movie => paramsId === movie.id);
+      setMovie(newMovie);
     } else if (!paramsId && JSON.stringify(movie) !== '{}') {
-      this.setState({movie: {}});
+      setMovie({});
     }
-  }
+  }, [params]);
 
-  render() {
-    return (
-      <>
-        {this.props.data.map(movie => (
-          <Cart
-            key={movie.id}
-            movie={movie}
-            {...this.props}
-          />
-        ))}
-        <AboutMovies
-          movie={this.state.movie}
+  return (
+    <>
+      {props.data.map(movie => (
+        <Cart
+          key={movie.id}
+          movie={movie}
+          {...props}
         />
-      </>
-    );
-  }
-}
+      ))}
+      <AboutMovies
+        movie={movie}
+      />
+    </>
+  );
+};
 
 Catalog.displayName = 'Catalog';
 

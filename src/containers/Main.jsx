@@ -17,10 +17,10 @@ import NotFound from '../components/NotFound';
 const Main = ({movies, total, changeSort, sort, movieList}) => {
 
   const sortMovies = (by) => {
-    let newBy = sort.sortBy == by ? sort.sortBy : by;
-    let sortDirection = sort.sortOrder == 'desc' ? -1 : 1;
-    let newDir = sort.sortBy == by ? sortDirection * (-1) : sortDirection;
-    //sort current movies
+    let newBy = sort.sortBy === by ? sort.sortBy : by;
+    let sortDirection = sort.sortOrder === 'desc' ? -1 : 1;
+    let newDir = sort.sortBy === by ? sortDirection * (-1) : sortDirection;
+
     const sorted = [].slice.call(movies).sort((a, b) => {
       if (a[by] === b[by]) {
         return 0;
@@ -29,7 +29,7 @@ const Main = ({movies, total, changeSort, sort, movieList}) => {
     });
     console.log(sorted);
     movieList(sorted);
-    changeSort(newBy, newDir == 1 ? 'asc' : 'desc');
+    changeSort(newBy, newDir === 1 ? 'asc' : 'desc');
   };
 
   return (
