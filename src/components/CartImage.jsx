@@ -10,7 +10,7 @@ const CartImage = ({movie}) => {
 
   return (
     <div className="cart__image-block">
-      {hImage == 200 ? <img className="cart__image" src={movie.poster_path} alt={movie.title}/>
+      {hImage === 200 ? <img className="cart__image" src={movie.poster_path} alt={movie.title}/>
         : <span className="cart__image span"/>
       }
     </div>

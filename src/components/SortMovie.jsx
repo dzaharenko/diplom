@@ -7,9 +7,9 @@ const SortMovie = ({total, onChangeSort}) => {
   const [active, setActive] = useState(0);
 
   const handleClick = (str) => {
-    console.log(str, str == 'release_date' ? 1 : 2);
-    setActive(str == 'release_date' ? 1 : 2);
-    onChangeSort(str)
+    console.log(str, str === 'release_date' ? 1 : 2);
+    setActive(str === 'release_date' ? 1 : 2);
+    onChangeSort(str);
   };
 
   return (
@@ -17,8 +17,8 @@ const SortMovie = ({total, onChangeSort}) => {
       <div className="container main__panel">
         <h3><span className="total">{total}</span> movies found</h3>
         <span className="sort">Sort by: </span>
-        <div className="release"><span className={active == 1 ? 'active' : ''} onClick={() => handleClick('release_date')}>Release date</span></div>
-        <div className="vote"><span className={active == 2 ? 'active' : ''} onClick={() => handleClick('vote_average')}>Rating</span></div>
+        <div className="release"><span className={active === 1 ? 'active' : ''} onClick={() => handleClick('release_date')}>Release date</span></div>
+        <div className="vote"><span className={active === 2 ? 'active' : ''} onClick={() => handleClick('vote_average')}>Rating</span></div>
       </div>
     </div>
   );
